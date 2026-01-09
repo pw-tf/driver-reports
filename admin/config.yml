@@ -9,13 +9,15 @@ public_folder: "/assets/uploads"
 collections:
   - name: "drivers"
     label: "Drivers"
-    folder: "_drivers"
+    file: "drivers.json"
     create: true
     delete: true
-    format: "json"
-    identifier_field: "name"
-    summary: "{{name}} - {{registration}}"
     fields:
-      - { label: "Driver Name", name: "name", widget: "string", required: true }
-      - { label: "Registration", name: "registration", widget: "string", required: true }
-      - { label: "Form URL", name: "formUrl", widget: "string", required: true, hint: "Paste the complete Jotform URL here" }
+      - label: "Drivers"
+        name: "drivers"
+        widget: "list"
+        summary: "{{fields.name}} - {{fields.registration}}"
+        fields:
+          - { label: "Driver Name", name: "name", widget: "string", required: true }
+          - { label: "Registration", name: "registration", widget: "string", required: true }
+          - { label: "Form URL", name: "formUrl", widget: "string", required: true, hint: "Paste the complete Jotform URL here" }
