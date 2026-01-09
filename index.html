@@ -13,15 +13,23 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            background: #ffffff;
             min-height: 100vh;
             padding: 20px;
-            color: #e0e0e0;
+            color: #2a2a2a;
         }
 
         .container {
             max-width: 600px;
             margin: 0 auto;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            max-width: 180px;
+            height: auto;
         }
 
         header {
@@ -34,14 +42,14 @@
             font-size: 2.5rem;
             font-weight: 300;
             letter-spacing: 2px;
-            color: #ffffff;
+            color: #1a1a1a;
             text-transform: uppercase;
             margin-bottom: 10px;
         }
 
         .subtitle {
             font-size: 0.9rem;
-            color: #999;
+            color: #666;
             font-weight: 300;
             letter-spacing: 1px;
         }
@@ -53,18 +61,18 @@
         }
 
         .driver-card {
-            background: linear-gradient(145deg, #2a2a2a, #242424);
-            border: 1px solid #3a3a3a;
+            background: #f8f8f8;
+            border: 1px solid #e0e0e0;
             border-radius: 12px;
             padding: 24px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
 
         .driver-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-            border-color: #4a4a4a;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            border-color: #d0d0d0;
         }
 
         .driver-info {
@@ -74,14 +82,14 @@
         .driver-name {
             font-size: 1.5rem;
             font-weight: 500;
-            color: #ffffff;
+            color: #1a1a1a;
             margin-bottom: 8px;
             letter-spacing: 0.5px;
         }
 
         .driver-registration {
             font-size: 1rem;
-            color: #b0b0b0;
+            color: #666;
             font-weight: 300;
             letter-spacing: 1px;
             font-family: 'Courier New', monospace;
@@ -90,9 +98,9 @@
         .submit-button {
             width: 100%;
             padding: 16px;
-            background: linear-gradient(135deg, #3a3a3a 0%, #2a2a2a 100%);
+            background: #2a2a2a;
             color: #ffffff;
-            border: 1px solid #4a4a4a;
+            border: 1px solid #2a2a2a;
             border-radius: 8px;
             font-size: 1rem;
             font-weight: 500;
@@ -106,10 +114,10 @@
         }
 
         .submit-button:hover {
-            background: linear-gradient(135deg, #4a4a4a 0%, #3a3a3a 100%);
-            border-color: #5a5a5a;
+            background: #1a1a1a;
+            border-color: #1a1a1a;
             transform: translateY(-1px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .submit-button:active {
@@ -132,6 +140,29 @@
             font-weight: 300;
         }
 
+        footer {
+            text-align: center;
+            padding: 40px 20px 20px;
+            margin-top: 60px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .contact-info {
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: 300;
+        }
+
+        .contact-info a {
+            color: #2a2a2a;
+            text-decoration: none;
+            font-weight: 400;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
         @media (max-width: 480px) {
             h1 {
                 font-size: 2rem;
@@ -152,6 +183,8 @@
     </style>
 </head>
 <body>
+    <img src="logo.png" alt="Micronised Minerals Australia" class="logo">
+    
     <div class="container">
         <header>
             <h1>Driver Reports</h1>
@@ -162,6 +195,12 @@
             <div class="loading">Loading drivers...</div>
         </div>
     </div>
+
+    <footer>
+        <div class="contact-info">
+            Need help? Call <a href="tel:0412345678">0412 345 678</a>
+        </div>
+    </footer>
 
     <script>
         async function loadDrivers() {
