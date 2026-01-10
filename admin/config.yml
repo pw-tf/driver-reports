@@ -21,4 +21,5 @@ collections:
             fields:
               - { label: "Driver Name", name: "name", widget: "string", required: true }
               - { label: "Registration", name: "registration", widget: "string", required: true }
+              - { label: "PIN", name: "pin", widget: "string", required: true, hint: "4-digit PIN for this driver" }
               - { label: "Form URL", name: "formUrl", widget: "string", required: true, hint: "Paste the complete Jotform URL here" }
